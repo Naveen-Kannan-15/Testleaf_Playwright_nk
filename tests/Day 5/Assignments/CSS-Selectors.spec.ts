@@ -1,0 +1,20 @@
+import { test } from "@playwright/test";
+test('CSS Locators with LeafTaps', async ({page}) => {
+    await page.goto("https://leaftaps.com/opentaps/control/main")
+    await page.locator("#username").fill("democsr2")
+    await page.locator("#password").fill("crmsfa")
+    await page.locator(".decorativeSubmit").click()
+    await page.locator('[id="label"]').click()
+    await page.locator("a:has-text('Leads')").click()
+    await page.locator("a:has-text('Create Lead')").click()
+    await page.locator("#createLeadForm_companyName").fill("TestLeaf")
+    await page.locator("#createLeadForm_firstName").fill("Naveen")
+    await page.locator("#createLeadForm_lastName").fill("Kannan")
+    await page.locator("#createLeadForm_personalTitle").fill("Mr.")
+    await page.locator("#createLeadForm_generalProfTitle").fill("Engineer")
+    await page.locator("#createLeadForm_annualRevenue").fill("15,00,000 LPA")
+    await page.locator("#createLeadForm_departmentName").fill("Mechanical")
+    await page.locator("#createLeadForm_primaryPhoneCountryCode").fill("+91")
+    await page.locator("#createLeadForm_primaryPhoneNumber").fill("0987654321")
+    await page.locator(".smallSubmit").click() // 12704 ID created via this code in the Leaftaps
+})
