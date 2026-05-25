@@ -32,7 +32,7 @@ var studentDetails;
     studentDetails[studentDetails["scienceMark"] = 99] = "scienceMark";
     studentDetails[studentDetails["socialMark"] = 99] = "socialMark";
 })(studentDetails || (studentDetails = {}));
-function sscResult(tenthresult) {
+function sslcResult(tenthresult) {
     console.log("The result is :", tenthresult);
 }
-sscResult(studentDetails.scienceMark);
+sslcResult(studentDetails.scienceMark);
