@@ -1,0 +1,75 @@
+METHOD 1
+
+Plain script
+
+METHOD 2 (POM)
+
+Each Page is converted into separate pages - Classes
+Each Class holds method, parameters
+To access these methods and Parameters, we create Objects for that Class and use Dot notation
+
+TS File
+LoginPage - Class
+page - Property 1
+LoginURL - Method 1
+FillCreds - Method 2
+ClickLogin - Method 3
+Constructors - Method 4 (used to initialize page fixture for the entire class)
+
+SPEC File
+LoginObj - Object for the Class
+LoginObj.LoginURL(env.files)
+
+WelcomePage - Class
+page - Property 1
+ClickCRMSFA - Method 1
+Constructors - Method 2 (used to initialize page fixture for the entire class)
+
+WPObj - Object for the Class
+WPObj.ClickCRMSFA()
+
+CreateLeadPage - Class
+page - Property 1
+FillForm - Method 1
+Constructors - Method 2 (used to initialize page fixture for the entire class)
+
+CLPObj - Object for the Class
+CLPObj.FillForm("Naveen","25") OR CLPObj.FillForm(Details.json)
+
+METHOD 3 (ENHANCED POM)
+
+Each Page is converted into separate pages - Classes
+Each Class holds method, parameters
+To access these methods and Parameters, we create Objects for that Class 
+Create Custom Page Fixture for that object and then use Dot Notation
+
+
+TS file
+LoginPage - Class
+LoginURL - Method 1
+FillCreds - Method 2
+ClickLogin - Method 3
+Wrapper Class instead of Constructor and Page
+
+Custom Fixture TS file
+LoginObj - Object for the Class
+LoginFix - Fixture for the Object
+
+SPEC File
+LoginFix.LoginURL()
+
+WelcomePage - Class
+Wrapper Class instead of Constructor and Page
+ClickCRMSFA - Method 1
+
+WPObj - Object for the Class
+WPObj.ClickCRMSFA()
+
+CreateLeadPage - Class
+page - Property 1
+FillForm - Method 1
+Constructors - Method 2 (used to initialize page fixture for the entire class)
+
+CLPObj - Object for the Class
+CLPObj.FillForm("Naveen","25") OR CLPObj.FillForm(Details.json)
+
